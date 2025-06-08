@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
 }
 
 body {
@@ -461,3 +463,25 @@ header>div:last-child {
     line-height: 1.5;
     margin: 0;
 }
+
+.four-columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    align-items: stretch;
+}
+
+.four-columns > div {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.four-columns .column-2{
+    background-color: #2f8fd0;
+}
+

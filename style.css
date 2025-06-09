@@ -418,6 +418,7 @@ header>div:last-child {
 .talks-section {
     display: flex;
     gap: 30px;
+    background-color: #f0f0f0;
 }
 .talks-section .talks{
     flex: 1;
@@ -464,24 +465,89 @@ header>div:last-child {
     margin: 0;
 }
 
+
+/* NEWS CSS */
 .four-columns {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+    /* gap: 20px; */
+    /* padding: 20px; */
     align-items: stretch;
 }
 
-.four-columns > div {
+.four-columns > .news-1,
+.four-columns > .news-2 {
     flex: 1;
-    min-width: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.news-1, .news-2 {
+    transition: transform 0.3s ease;
+}
+
+.column-1, .column-3,
+.column-2, .column-4 {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.four-columns .column-2{
-    background-color: #2f8fd0;
+.column-1 img,
+.column-3 img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
+.column-2, .column-4 {
+    background-color: #2f8fd0;
+    padding: 10px;
+    color: white;
+}
+
+.column-2 h4, .column-4 h4 {
+    font-size: 1.2rem;
+}
+
+.column-2 p, .column-4 p {
+    font-size: 1rem;
+}
+
+.news-1:hover .column-1 img,
+.news-2:hover .column-3 img
+{
+    transform: scale(1.1);
+    z-index: -1;
+}
+
+.four-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    /* gap: 20px; */
+}
+
+.news-1, .news-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    min-height: 100%;
+}
+
+.column-1, .column-3,
+.column-2, .column-4 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+}
+
+.column-1, .column-3 {
+    overflow: hidden;
+}

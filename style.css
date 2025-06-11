@@ -504,16 +504,16 @@ header>div:last-child {
 
 .column-2, .column-4 {
     background-color: #2f8fd0;
-    padding: 10px;
     color: white;
 }
 
 .column-2 h4, .column-4 h4 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .column-2 p, .column-4 p {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    padding-right: 42px;
 }
 
 .news-1:hover .column-1 img,
@@ -550,4 +550,54 @@ header>div:last-child {
 
 .column-1, .column-3 {
     overflow: hidden;
+}
+
+.content-wrapper {
+    padding: 30px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.content-wrapper h4{
+    padding-bottom: 34px ;
+}
+
+
+.column-2 .content-wrapper,
+.column-4 .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.column-2 .content-wrapper a,
+.column-4 .content-wrapper a {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.read-more {
+    margin-top: auto;
+    align-self: flex-start;
+    width: 100%;
+}
+
+
+/* reports and stories */
+.reports-and-stories {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* padding: 60px 20px; */
+    background-color: #f0f0f0;
+}
+.reports-and-stories .reports {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: inset 1px 1px 150px #000;
 }

@@ -6,10 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wipro</title>
     <link rel="stylesheet" href="style.css">
-    <script src="scrip.js" defer></script>
+    
 </head>
 
 <body>
+
+    <!-- chatbot section -->
+
+    <div id="chatbot">
+        <div id="messages"></div>
+        <div id="inputArea">
+            <input id="userInput" placeholder="Ask anything about Wipro..." autocomplete="off" />
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+
+    <button id="chatToggle" title="Open Chatbot" aria-label="Open Chatbot"></button>
+
+
     <!-- header section -->
     <header>
         <div class="logo">
@@ -335,30 +349,12 @@
     </section>
 
     <!-- reports and stories -->
-    <!-- <section>
-        <div class="reports-and-stories">
-            <div class="reports" style="background-image: url(https://www.wipro.com/content/dam/nexus/en/cybersecurity/images/socr-1896x275.jpg);">
-                <h3>State of Cybersecurity Report 2025</h3>
-                <p>AI Strengthens and Disrupts Cyber Resilience.</p>
-                <button class="hero-button">Learn More</button>
-            </div>
-            <div class="stories" style="background-color: #1B6AA8;">
-                <h4>
-                    Customer 
-                    <br>
-                    Success Stories
-                </h4>
-                <p>How Wipro uses consulting-led, AI-powered strategies to help customers realize their ambitions.</p>
-                <button class="hero-button">Learn More</button>
-            </div>
-        </div>
-    </section> -->
 
     <section class="reports-and-stories">
         <section class="reports">
             <!-- <video src="source/video2.mp4" autoplay loop muted class="hero-video"></video> -->
             <div class="hero-content">
-                <h1 >State of Cybersecurity Report 2025 <span>.</span></h1>
+                <h1 >State of Cybersecurity Report 2025 </h1>
                 
                 <p>AI Strengthens and Disrupts Cyber Resilience.</p>
                 <button class="hero-button">Learn More</button>
@@ -367,20 +363,113 @@
         </section>  
         <section class="stories">
         <!-- <video src="source/video2.mp4" autoplay loop muted class="hero-video"></video> -->
-        <div class="hero-content">
-            <h1 >
-                Customer 
-                <br>
-                Success Stories
-            <span>.</span></h1>
-            
-            <p>How Wipro uses consulting-led, AI-powered strategies to help customers realize their ambitions.</p>
-            <button class="hero-button">Learn More</button>
+            <div class="hero-content">
+                <h1 >
+                    Customer 
+                    <br>
+                    Success Stories
+                </h1>
+                
+                <p>How Wipro uses consulting-led, AI-powered strategies to help customers realize their ambitions.</p>
+                <button class="hero-button">Learn More</button>
+            </div>
+        
+        </section>  
+    </section>
+
+    <!-- SOME EXTRA NEWS -->    
+    <!-- <section>
+
+        <div class="extra-news-one">
+            <a href="https://www.wipro.com/newsroom/press-releases/2025/wipro-announces-results-for-the-quarter-and-year-ended-march-31-2025/">
+                <div class="bg-img"></div>
+                <p>.</p>
+            </a>
+        </div>
+    </section> -->
+
+    <section class="some-extra-news">
+        <div class="talks">
+            <img src="https://www.wipro.com/content/dam/nexus/en/hompage-assets/images/wipro-q4fy25-quick-tile-640x540-2.jpg" alt="">
+
         </div>
         
-    </section>  
-
+        <div class="talks">
+            <img src="https://www.wipro.com/content/dam/nexus/en/hp-tile-updated-tile-2.png" alt="">
+            <div class="news-title">
+                <p>Wipro is proudly committed to achieving net-zero emissions by 2040</p>
+            </div>
+        </div>
+        <div class="talks">
+            <img src="https://www.wipro.com/content/dam/nexus/en/hompage-assets/images/640x540-homepage-agentic-ai.jpg" alt="">
+            <div class="news-title">
+                <p>Agentic AI: The New Frontier in Financial Services Innovation by CAPCO</p>
+            </div>
+        </div>
     </section>
+
+    <!-- form section -->
+    <section>
+        <div class="some-text">
+            <p>
+                Every day, Wipro leverages AI-infused technologies
+                <br>
+                to empower clients around the globe to build
+                <br>
+                a more resilient, secure and sustainable future.
+                <br>
+                <br>
+                How can we help you?
+            </p>
+
+        </div>
+        <div class="form-section">
+            <form action="#" method="post">
+                <input type="text" name="first-name" placeholder="First Name" required>
+                <input type="text" name="last-name" placeholder="Last Name" required>
+                <input type="email" name="work-email" placeholder="Work Email" required>
+                <input type="text" name="job-title" placeholder="Job Title" required>
+                <input type="text" name="company" placeholder="Company" required>
+                <select name="country" required>
+                    <option value="">Country</option>
+                    <option value="India">India</option>
+                    <option value="US">US</option>
+                    <option value="UK">UK</option>
+                    <option value="Canada">Canada</option>
+                </select>
+                <textarea name="message" rows="4" placeholder="Message"></textarea>
+                <div class="tick-box">
+                    <input type="checkbox" name="privacy-policy" id="privacy-policy" required>
+                    <label for="privacy-policy">I agree to the <a href="https://www.wipro.com/privacy-policy" target="_blank">Privacy Policy</a></label>
+                </div>
+                <div class="tick-box">
+                    <input type="checkbox" name="terms-and-conditions" id="terms-and-conditions" required>
+                    <label for="terms-and-conditions">I agree to the <a href="https://www.wipro.com/terms-and-conditions" target="_blank">Terms and Conditions</a></label>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Wipro</p>
+
+        <div class="footer-links">
+            <a href="https://www.wipro.com/disclaimer/" target="_blank">Disclaimer</a>
+            <a href="https://www.wipro.com/privacy-statement/" target="_blank">Privacy</a>
+            <a href="/content/dam/nexus/en/investor/corporate-governance/policies-and-guidelines/ethical-guidelines/wipros-anti-slavery-and-anti-human-trafficking-policy-statement.pdf" target="_blank">Modern Slavery Statement</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/WiproLimited/" target="_blank"><img src="https://www.wipro.com/content/dam/nexus/en/icon-facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/wiprolimited" target="_blank"><img src="	https://www.wipro.com/content/dam/nexus/en/icon-Instagram.png" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/company/wipro" target="_blank"><img src="https://www.wipro.com/content/dam/nexus/en/icon-linkedin.png" alt="LinkedIn"></a>
+            <a href="https://www.youtube.com/user/Wiprovideos" target="_blank"><img src="https://www.wipro.com/content/dam/nexus/en/icon-youtube.png" alt="Youtube"></a>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="scrip.js"></script>
 </body>
+
 
 </html>

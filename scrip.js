@@ -133,3 +133,5 @@ closeBtn.addEventListener('click', () => {
   chatbot.style.display = 'none';  // Hide chatbot
   chatToggle.style.display = 'block'; // Show toggle button
 });
+
+

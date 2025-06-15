@@ -135,23 +135,34 @@ header>div:last-child {
     left: 0;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    padding: 30px;
     display: none;
     flex-direction: column;
     gap: 10px;
-    min-width: 150px;
+    min-width: 400px;
     z-index: 100;
 }
 
-.dropdown .dropdown-box a {
+.dropdown-box p{
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    color: #202020;
+    font-weight: 600;
+}
+
+.dropdown-box a {
     color: #202020;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 20px;
     transition: color 0.3s;
+    padding: 8px 12px;
 }
 
 .dropdown-box a:hover {
     color: #0077cc;
+    text-decoration: underline;
 }
 
 .nav-item:hover .dropdown-box,
@@ -171,8 +182,73 @@ header>div:last-child {
 }
 
 .dropdown-color {
-    background-color: rgb(245, 152, 12);
+    background-color: rgb(255, 153, 0);
+    color: rgb(255, 153, 0);
 }
+
+.dropdown-box-about {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 300px;
+    z-index: 100;
+}
+.dropdown-box-about a {
+    color: #202020;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+    padding: 8px 12px;
+}
+.dropdown-box-about a:hover {
+    color: #0077cc;
+    text-decoration: underline;
+}
+.nav-item:hover .dropdown-box-about {
+    display: flex;
+}
+
+.dropdown-box-header {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.dropdown-box-lang {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 150px;
+    z-index: 100;
+}
+.dropdown-box-lang a {
+    color: #202020;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+    padding: 8px 12px;
+}
+.dropdown-box-lang a:hover {
+    color: #0077cc;
+    text-decoration: underline;
+}
+
+.nav-actions button:hover .dropdown-box-lang {
+    display: flex;
+}
+
 
 .menu-toggle {
     display: none;
@@ -309,6 +385,18 @@ header>div:last-child {
     text-align: center;
     overflow: hidden;
 }
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -317,6 +405,8 @@ header>div:last-child {
     padding: 20px;
     align-items: center;
     /* background: rgba(0,0,0,0.5); */
+    animation: fadeUp 1.2s ease-out 0.3s forwards;
+    opacity: 0;
 }
 
 .hero h1 {
@@ -359,6 +449,20 @@ header>div:last-child {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+
+    transform: scale(0.95); /* start slightly smaller */
+    animation: scaleUp 0.5s ease-out forwards;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 .hero-content h1 span{
     color: rgb(54, 153, 178);
@@ -601,6 +705,9 @@ header>div:last-child {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    animation: fadeUp 1.2s ease-out 0.2s forwards;
+    opacity: 0;
     /* box-shadow: inset 1px 1px 150px #000; */
     /* padding: 20px; */
 }
@@ -610,6 +717,8 @@ header>div:last-child {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    animation: fadeUp 1.2s ease-out 0.3s forwards;
+    opacity: 0;
     /* box-shadow: inset 1px 1px 150px #000; */
     /* padding: 20px; */
 }
@@ -964,6 +1073,8 @@ footer .footer-links{
     gap: 20px;
 }
 
+/* chatbot */
+
 #chatbot {
     position: fixed;
     bottom: 20px;
@@ -1084,4 +1195,119 @@ footer .footer-links{
 
 #chatToggle:hover {
     background-color: #ffffff;
+}
+
+
+
+/* SUSTAINABILITY.HTML */
+
+.hero-sustainability {
+    position: relative;
+    margin-top: 100px;
+    padding-top: 265px;
+    padding-bottom: 220px;
+    text-align: center;
+    overflow: hidden;
+}
+.hero-sustainability-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    align-items: center;
+}
+.hero-sustainability h1 {
+    font-size: 4.375rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.hero-sustainability p {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.hero-sustainability-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.playbutton-sustainability {
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    max-width: 80px;
+    width: 100%;
+}
+.playbutton-sustainability img {
+    width: 180px;
+    height: 120px;
+}
+
+/* impact section */
+
+.impact-logo{
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+.impact-logo img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.impact-content{
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    padding: 0px;
+}
+
+.impact-content h2 {
+    font-weight: 600;
+    margin-bottom: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+
+/* Portfolio section */
+.Portfolio-content{
+    background-image: url('https://www.wipro.com/content/dam/nexus/en/Banner3.png');
+    background-size: cover;
+    background-position: center;
+    padding: 150px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: 30px;
+}
+
+.Portfolio-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+}
+.Portfolio-content p {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    padding-left: 250px;
+    padding-right: 250px;
 }

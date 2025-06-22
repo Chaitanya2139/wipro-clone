@@ -24,7 +24,7 @@
     <!-- header section -->
     <header>
         <div class="logo" style="cursor: pointer;">
-           <a href="index.html"> <img src="https://www.wipro.com/content/dam/wipro/social-icons/wipro_new_logo.svg" alt="Wipro Logo"></a>
+            <a href="index.html"> <img src="https://www.wipro.com/content/dam/wipro/social-icons/wipro_new_logo.svg" alt="Wipro Logo"></a>
         </div>
 
         <div class="navigation">
@@ -188,13 +188,24 @@
             
             <p>How small actions can yield outsized sustainability results.</p>
             <div class="playbutton-sustainability">
-                <a href="https://youtu.be/f9gLGmiEfoY?si=zW6re1d2yHu6PbGn" target="_blank">
+                <a href="https://player.vimeo.com/video/922333638?h=e47fbfac70" onclick="openVideo(event, this)">
                     <img src="source/image.png" alt="play video">
                 </a>
             </div>
         </div>
         
     </section>  
+
+    <!-- video overlay -->
+    <div id="videoOverlay"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
+        <div style="position:relative; width:90%; max-width:800px;">
+            <iframe id="videoFrame" width="100%" height="450" frameborder="0" allow="autoplay; fullscreen"
+                allowfullscreen></iframe>
+            <button onclick="closeVideo()"
+                style="position:absolute; top:10px; right:10px; background:#fff; border:none; padding:5px 10px; cursor:pointer;">X</button>
+        </div>
+    </div>
 
     <!-- impact section -->
 

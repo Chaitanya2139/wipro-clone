@@ -134,4 +134,18 @@ closeBtn.addEventListener('click', () => {
   chatToggle.style.display = 'block'; // Show toggle button
 });
 
+function openVideo(event, element) {
+    event.preventDefault();
+    const overlay = document.getElementById("videoOverlay");
+    const frame = document.getElementById("videoFrame");
+    frame.src = element.href + "&autoplay=1"; // Load and autoplay video
+    overlay.style.display = "flex";
+  }
+
+  function closeVideo() {
+    const overlay = document.getElementById("videoOverlay");
+    const frame = document.getElementById("videoFrame");
+    frame.src = ""; // Stop video
+    overlay.style.display = "none";
+  }
 

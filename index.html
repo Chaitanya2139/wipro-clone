@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wipro</title>
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 
 <body>
@@ -27,7 +27,8 @@
     <!-- header section -->
     <header>
         <div class="logo" style="cursor: pointer;">
-            <a href="index.html"> <img src="https://www.wipro.com/content/dam/wipro/social-icons/wipro_new_logo.svg" alt="Wipro Logo"></a>
+            <a href="index.html"> <img src="https://www.wipro.com/content/dam/wipro/social-icons/wipro_new_logo.svg"
+                    alt="Wipro Logo"></a>
         </div>
 
         <div class="navigation">
@@ -44,7 +45,7 @@
                                 width="16" height="16" class="arrow-icon">
                             <div class="dropdown-box">
                                 <div class="dropdown-box-header">
-                                    <div class="dropdown-color" >.</div>
+                                    <div class="dropdown-color">.</div>
                                     <div class="dropdown-title">What We Do</div>
                                 </div>
                                 <p>Services</p>
@@ -73,7 +74,7 @@
                                 width="16" height="16" class="arrow-icon">
                             <div class="dropdown-box-about">
                                 <div class="dropdown-box-header">
-                                    <div class="dropdown-color" >.</div>
+                                    <div class="dropdown-color">.</div>
                                     <div class="dropdown-title">About Us</div>
                                 </div>
                                 <a href="#">Company</a>
@@ -179,15 +180,15 @@
     <section class="hero">
         <video src="source/video2.mp4" autoplay loop muted class="hero-video"></video>
         <div class="hero-content">
-            <h1 >Introducing the Wipro Innovation Network <span>.</span></h1>
-            
+            <h1>Introducing the Wipro Innovation Network <span>.</span></h1>
+
             <p>Empowering businesses with innovative solutions.</p>
             <button class="hero-button">
                 <a href="https://www.wipro.com/innovation/" target="_blank">Learn More</a>
             </button>
         </div>
-        
-    </section>  
+
+    </section>
 
     <!-- section part2- case study section-->
     <section class="case-study">
@@ -197,18 +198,20 @@
                 <span>.</span>
             </div>
             <div class="description">
-                Wipro is helping JFK International Air Terminal develop a cloud data strategy to centralize operations, improve security and customer experience.
+                Wipro is helping JFK International Air Terminal develop a cloud data strategy to centralize operations,
+                improve security and customer experience.
             </div>
         </div>
         <div class="case-study-image">
-            <img src="https://www.wipro.com/content/dam/nexus/en/hompage-assets/images/960x721-homepage-tile-wipro-jfk-international-air-terminal.jpg" alt="">
+            <img src="https://www.wipro.com/content/dam/nexus/en/hompage-assets/images/960x721-homepage-tile-wipro-jfk-international-air-terminal.jpg"
+                alt="">
             <div class="playbutton">
-                <a href="https://player.vimeo.com/video/1072761683?h=2a415fc636" target="_blank">
-                    <img src="https://www.wipro.com/etc.clientlibs/nexus/clientlib-homepage-textandimage/resources/icon_play.png" alt="Play Video" >
+                <a href="https://player.vimeo.com/video/1072761683?h=2a415fc636" onclick="openVideo(event, this)">
+                    <img src="https://www.wipro.com/etc.clientlibs/nexus/clientlib-homepage-textandimage/resources/icon_play.png"
+                        alt="Play Video">
                 </a>
             </div>
         </div>
-
     </section>
 
     <!-- section part3 - talks -->
@@ -216,25 +219,27 @@
         <div class="talks">
             <img src="https://www.wipro.com/content/dam/nexus/en/video-qt-1.jpg" alt="">
             <div class="playbutton">
-                <a href="https://player.vimeo.com/video/1022508633" target="_blank">
+                <a href="https://player.vimeo.com/video/1022508633?h=31cd3cfced" onclick="openVideo(event, this)">
                     <img src="source/image.png" alt="play video">
                 </a>
             </div>
             <h4>Wipro - Alcatel-Lucent Enterprise Partnership with CFO Marc Blecken</h4>
         </div>
+
         <div class="talks">
             <img src="https://www.wipro.com/content/dam/nexus/en/abb-case-study.jpg" alt="">
             <div class="playbutton">
-                <a href="https://player.vimeo.com/video/1022508633" target="_blank">
+                <a href="https://player.vimeo.com/video/921065464?h=a77b5a378d" onclick="openVideo(event, this)">
                     <img src="source/image.png" alt="play video">
                 </a>
             </div>
             <h4>ABB partners with Wipro to transform its Information Systems Digital Workplace</h4>
         </div>
+
         <div class="talks">
             <img src="https://www.wipro.com/content/dam/nexus/en/video-qt-2.jpg" alt="">
             <div class="playbutton">
-                <a href="https://player.vimeo.com/video/985731620" target="_blank">
+                <a href="https://player.vimeo.com/video/985731620?h=ff522c1588" onclick="openVideo(event, this)">
                     <img src="source/image.png" alt="play video">
                 </a>
             </div>
@@ -242,6 +247,16 @@
         </div>
     </section>
 
+    <!-- Shared Video Overlay (Place once near end of body) -->
+    <div id="videoOverlay"
+        style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;">
+        <div style="position:relative; width:80%; max-width:800px;">
+            <iframe id="videoFrame" width="100%" height="450" frameborder="0" allow="autoplay; fullscreen"
+                allowfullscreen></iframe>
+            <button onclick="closeVideo()"
+                style="position:absolute; top:10px; right:10px; background:#fff; border:none; padding:5px 10px; cursor:pointer;">X</button>
+        </div>
+    </div>
     <!-- section part4 - news -->
     <section>
 
@@ -249,16 +264,18 @@
         <div class="four-columns">
             <div class="news-1">
                 <div class="column-1">
-                    <img src="https://www.wipro.com/content/dam/nexus/en/hompage-assets/images/1920x1080-homepage-navigating-tariff-shifts.jpg" alt="">
+                    <img src="https://www.wipro.com/content/dam/nexus/en/hompage-assets/images/1920x1080-homepage-navigating-tariff-shifts.jpg"
+                        alt="">
                 </div>
                 <div class="column-2">
                     <div class="content-wrapper">
                         <h4>TRANSFORMATION IN A TIME OF DISRUPTION</h4>
-                        <p>Corporations are feeling the pressure in today’s volatile macroeconomic environment. Supply chains are stressed, cost structures are unpredictable, and growth forecasts are...</p>
+                        <p>Corporations are feeling the pressure in today’s volatile macroeconomic environment. Supply
+                            chains are stressed, cost structures are unpredictable, and growth forecasts are...</p>
                         <div class="read-more">
                             <a href="https://www.wipro.com/what-we-think/" target="_blank">
                                 <b>READ MORE ▶</b>
-                                
+
                             </a>
                         </div>
                     </div>
@@ -266,16 +283,19 @@
             </div>
             <div class="news-2">
                 <div class="column-3">
-                    <img src="https://www.wipro.com/content/dam/nexus/en/hompage-assets/images/homepage-navigating-tariff-shifts-tile-image.jpg" alt="">
+                    <img src="https://www.wipro.com/content/dam/nexus/en/hompage-assets/images/homepage-navigating-tariff-shifts-tile-image.jpg"
+                        alt="">
                 </div>
                 <div class="column-4">
                     <div class="content-wrapper" style="background-color: #1B6AA8">
                         <h4>NAVIGATING TARIFF SHIFTS</h4>
-                        <p>AI-powered capabilities integrated with current software and tools can significantly help companies navigate the complex and evolving tariff...</p>
+                        <p>AI-powered capabilities integrated with current software and tools can significantly help
+                            companies navigate the complex and evolving tariff...</p>
                         <div class="read-more">
-                            <a href="https://www.wipro.com/travel-and-transportation/articles/navigating-tariff-shifts/" target="_blank">
+                            <a href="https://www.wipro.com/travel-and-transportation/articles/navigating-tariff-shifts/"
+                                target="_blank">
                                 <b>READ MORE ▶</b>
-                                
+
                             </a>
                         </div>
                     </div>
@@ -286,33 +306,37 @@
         <!-- column 2 -->
         <div class="four-columns">
             <div class="news-1">
-                
+
                 <div class="column-2" style="background-color: #746FA8;">
                     <div class="content-wrapper">
                         <h4>WIPRO WINS A £500M STRATEGIC DEAL WITH UK INSURANCE GIANT PHOENIX GROUP</h4>
                         <p>The 10-year deal will include platform-based, regulated Third-Party...</p>
                         <div class="read-more">
-                            <a href="https://www.wipro.com/newsroom/press-releases/2025/wipro-wins-a-pound500m-strategic-deal-with-uk-insurance-giant-phoenix-group/" target="_blank">
+                            <a href="https://www.wipro.com/newsroom/press-releases/2025/wipro-wins-a-pound500m-strategic-deal-with-uk-insurance-giant-phoenix-group/"
+                                target="_blank">
                                 <b>READ MORE ▶</b>
-                                
+
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="column-1">
-                    <img src="https://www.wipro.com/content/dam/nexus/en/960x810-home-page-tile-pound500m-phoenix-group.jpg" alt="">
+                    <img src="https://www.wipro.com/content/dam/nexus/en/960x810-home-page-tile-pound500m-phoenix-group.jpg"
+                        alt="">
                 </div>
             </div>
             <div class="news-2">
-                
+
                 <div class="column-4" style="background-color: #3398B3;">
                     <div class="content-wrapper">
                         <h4>STAYING COMPETITIVE IN TELECOM WITH AI & PLATFORM INNOVATION</h4>
-                        <p>By adopting technology-driven platforms, leveraging AI, and expanding partnerships, companies can position themselves for...</p>
+                        <p>By adopting technology-driven platforms, leveraging AI, and expanding partnerships, companies
+                            can position themselves for...</p>
                         <div class="read-more">
-                            <a href="https://www.wipro.com/communications/articles/revolutionizing-telecom-strategies-for-platform-development-and-ai-integration/"  target="_blank">
+                            <a href="https://www.wipro.com/communications/articles/revolutionizing-telecom-strategies-for-platform-development-and-ai-integration/"
+                                target="_blank">
                                 <b>READ MORE ▶</b>
-                                
+
                             </a>
                         </div>
                     </div>
@@ -332,11 +356,13 @@
                 <div class="column-2" style="background-color: #341d55;">
                     <div class="content-wrapper">
                         <h4>DRIVING BUSINESS OUTCOMES WITH AI</h4>
-                        <p>A Harvard Business Review analytic services report in association with Wipro FullStride Cloud.</p>
+                        <p>A Harvard Business Review analytic services report in association with Wipro FullStride
+                            Cloud.</p>
                         <div class="read-more">
-                            <a href="https://www.wipro.com/cloud/articles/driving-business-outcomes-with-ai/" target="_blank">
+                            <a href="https://www.wipro.com/cloud/articles/driving-business-outcomes-with-ai/"
+                                target="_blank">
                                 <b>READ MORE ▶</b>
-                                
+
                             </a>
                         </div>
                     </div>
@@ -349,11 +375,13 @@
                 <div class="column-4" style="background-color: #00a796;">
                     <div class="content-wrapper">
                         <h4>INDIA'S BRANCH OF THE FUTURE</h4>
-                        <p>Discover how Indian banks can equip their branches for future success in this cutting-edge Capco report.</p>
+                        <p>Discover how Indian banks can equip their branches for future success in this cutting-edge
+                            Capco report.</p>
                         <div class="read-more">
-                            <a href="https://www.capco.com/intelligence/capco-intelligence/branch-of-the-future-india" target="_blank">
+                            <a href="https://www.capco.com/intelligence/capco-intelligence/branch-of-the-future-india"
+                                target="_blank">
                                 <b>READ MORE ▶</b>
-                                
+
                             </a>
                         </div>
                     </div>
@@ -367,34 +395,35 @@
         <section class="reports">
             <!-- <video src="source/video2.mp4" autoplay loop muted class="hero-video"></video> -->
             <div class="hero-content">
-                <h1 >State of Cybersecurity Report 2025 </h1>
-                
+                <h1>State of Cybersecurity Report 2025 </h1>
+
                 <p>AI Strengthens and Disrupts Cyber Resilience.</p>
                 <button class="hero-button">
-                    <a href="https://www.wipro.com/cybersecurity/reports/state-of-cybersecurity-report-2025/" target="_blank">Learn More</a>
+                    <a href="https://www.wipro.com/cybersecurity/reports/state-of-cybersecurity-report-2025/"
+                        target="_blank">Learn More</a>
                 </button>
             </div>
-        
-        </section>  
+
+        </section>
         <section class="stories">
-        <!-- <video src="source/video2.mp4" autoplay loop muted class="hero-video"></video> -->
+            <!-- <video src="source/video2.mp4" autoplay loop muted class="hero-video"></video> -->
             <div class="hero-content">
-                <h1 >
-                    Customer 
+                <h1>
+                    Customer
                     <br>
                     Success Stories
                 </h1>
-                
+
                 <p>How Wipro uses consulting-led, AI-powered strategies to help customers realize their ambitions.</p>
                 <button class="hero-button">
                     <a href="https://www.wipro.com/case-studies/" target="_blank">Learn More</a>
                 </button>
             </div>
-        
-        </section>  
+
+        </section>
     </section>
 
-    <!-- SOME EXTRA NEWS -->    
+    <!-- SOME EXTRA NEWS -->
     <!-- <section>
 
         <div class="extra-news-one">
@@ -407,10 +436,11 @@
 
     <section class="some-extra-news">
         <div class="talks">
-            <img src="https://www.wipro.com/content/dam/nexus/en/hompage-assets/images/wipro-q4fy25-quick-tile-640x540-2.jpg" alt="">
+            <img src="https://www.wipro.com/content/dam/nexus/en/hompage-assets/images/wipro-q4fy25-quick-tile-640x540-2.jpg"
+                alt="">
 
         </div>
-        
+
         <div class="talks">
             <img src="https://www.wipro.com/content/dam/nexus/en/hp-tile-updated-tile-2.png" alt="">
             <div class="news-title">
@@ -419,7 +449,8 @@
         </div>
 
         <div class="talks">
-            <img src="https://www.wipro.com/content/dam/nexus/en/hompage-assets/images/640x540-homepage-agentic-ai.jpg" alt="">
+            <img src="https://www.wipro.com/content/dam/nexus/en/hompage-assets/images/640x540-homepage-agentic-ai.jpg"
+                alt="">
             <div class="news-title">
                 <p>Agentic AI: The New Frontier in Financial Services Innovation by CAPCO</p>
             </div>
@@ -458,11 +489,14 @@
                 <textarea name="message" rows="4" placeholder="Message"></textarea>
                 <div class="tick-box">
                     <input type="checkbox" name="privacy-policy" id="privacy-policy" required>
-                    <label for="privacy-policy">I agree to the <a href="https://www.wipro.com/privacy-policy" target="_blank">Privacy Policy</a></label>
+                    <label for="privacy-policy">I agree to the <a href="https://www.wipro.com/privacy-policy"
+                            target="_blank">Privacy Policy</a></label>
                 </div>
                 <div class="tick-box">
                     <input type="checkbox" name="terms-and-conditions" id="terms-and-conditions" required>
-                    <label for="terms-and-conditions">I agree to the <a href="https://www.wipro.com/terms-and-conditions" target="_blank">Terms and Conditions</a></label>
+                    <label for="terms-and-conditions">I agree to the <a
+                            href="https://www.wipro.com/terms-and-conditions" target="_blank">Terms and
+                            Conditions</a></label>
                 </div>
                 <button type="submit">Submit</button>
             </form>
@@ -475,14 +509,19 @@
         <div class="footer-links">
             <a href="https://www.wipro.com/disclaimer/" target="_blank">Disclaimer</a>
             <a href="https://www.wipro.com/privacy-statement/" target="_blank">Privacy</a>
-            <a href="/content/dam/nexus/en/investor/corporate-governance/policies-and-guidelines/ethical-guidelines/wipros-anti-slavery-and-anti-human-trafficking-policy-statement.pdf" target="_blank">Modern Slavery Statement</a>
+            <a href="/content/dam/nexus/en/investor/corporate-governance/policies-and-guidelines/ethical-guidelines/wipros-anti-slavery-and-anti-human-trafficking-policy-statement.pdf"
+                target="_blank">Modern Slavery Statement</a>
         </div>
 
         <div class="social-icons">
-            <a href="https://www.facebook.com/WiproLimited/" target="_blank"><img src="https://www.wipro.com/content/dam/nexus/en/icon-facebook.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/wiprolimited" target="_blank"><img src="	https://www.wipro.com/content/dam/nexus/en/icon-Instagram.png" alt="Instagram"></a>
-            <a href="https://www.linkedin.com/company/wipro" target="_blank"><img src="https://www.wipro.com/content/dam/nexus/en/icon-linkedin.png" alt="LinkedIn"></a>
-            <a href="https://www.youtube.com/user/Wiprovideos" target="_blank"><img src="https://www.wipro.com/content/dam/nexus/en/icon-youtube.png" alt="Youtube"></a>
+            <a href="https://www.facebook.com/WiproLimited/" target="_blank"><img
+                    src="https://www.wipro.com/content/dam/nexus/en/icon-facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/wiprolimited" target="_blank"><img
+                    src="	https://www.wipro.com/content/dam/nexus/en/icon-Instagram.png" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/company/wipro" target="_blank"><img
+                    src="https://www.wipro.com/content/dam/nexus/en/icon-linkedin.png" alt="LinkedIn"></a>
+            <a href="https://www.youtube.com/user/Wiprovideos" target="_blank"><img
+                    src="https://www.wipro.com/content/dam/nexus/en/icon-youtube.png" alt="Youtube"></a>
         </div>
     </footer>
 
